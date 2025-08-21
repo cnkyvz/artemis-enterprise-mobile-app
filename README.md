@@ -158,4 +158,3 @@ Cenk Yavuz - Full Stack Developer
 Email: cnkyvzz@gmail.com
 LinkedIn: linkedin.com/in/yavuzcenk
 GitHub: @cnkyvz
-
