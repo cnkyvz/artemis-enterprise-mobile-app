@@ -7,7 +7,6 @@
 [![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://aws.amazon.com/)
 [![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/)
 
-
 A comprehensive enterprise mobile application built with React Native, featuring offline capabilities and real-time tracking system.
 
 ## 🌟 Features
@@ -56,15 +55,12 @@ A comprehensive enterprise mobile application built with React Native, featuring
 [Add screenshots here - remove any sensitive company data]
 
 ## 🏗️ Architecture
-
 artemis-enterprise-mobile-app/
 ├── app/                  # Main application screens (React Native)
 ├── components/           # Reusable UI components
 ├── utils/               # API integration and helper functions
 ├── assets/              # Images and static files
 └── package.json         # Dependencies and scripts
-
-   
 
 ## 🚀 Key Achievements
 
@@ -118,11 +114,8 @@ artemis-enterprise-mobile-app/
   deviceToken: "30days expiry - device binding",
   sessionId: "persistent until logout"
 }
-
-## 🔧 Installation & Setup
-
-```bash
-# Clone the repository
+🔧 Installation & Setup
+bash# Clone the repository
 git clone https://github.com/cnkyvz/artemis-enterprise-mobile-app.git
 
 # Install dependencies
@@ -139,7 +132,6 @@ npm run ios
 
 # Run on Android
 npm run android
-
 📊 Performance Metrics
 
 App Size: < 50MB
@@ -166,3 +158,4 @@ Cenk Yavuz - Full Stack Developer
 Email: cnkyvzz@gmail.com
 LinkedIn: linkedin.com/in/yavuzcenk
 GitHub: @cnkyvz
+
