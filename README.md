@@ -91,6 +91,39 @@ A comprehensive enterprise mobile application built with React Native, featuring
 - QR code integration for asset tracking
 - Appointment scheduling system
 
+## 🔐 Advanced Authentication System
+
+### Multi-Layer Token Architecture
+- **Access Token** - Short-lived (15 min) for API requests
+- **Refresh Token** - Medium-lived (7 days) for token renewal  
+- **Device Token** - Long-lived (30 days) for device recognition
+- **Automatic Token Rotation** - Seamless background refresh
+
+### Enterprise-Level Session Management
+- Netflix/Spotify-style persistent sessions
+- Maintains login state until explicit logout
+- Cross-app session sharing
+- Background token refresh without user interruption
+- Secure token storage with encryption
+
+### Device & Activity Monitoring
+- Real-time device fingerprinting and tracking
+- App state monitoring (foreground/background/closed)
+- Session activity logging and analytics
+- Multi-device session management
+- Suspicious activity detection and automatic logout
+- Login location and IP tracking
+
+### Smart Token Strategy
+```typescript
+// enterpriseTokenManager.ts implements:
+{
+  accessToken: "15min expiry - API requests",
+  refreshToken: "7days expiry - token renewal", 
+  deviceToken: "30days expiry - device binding",
+  sessionId: "persistent until logout"
+}
+
 ## 🔧 Installation & Setup
 
 ```bash
