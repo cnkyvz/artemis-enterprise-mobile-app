@@ -57,19 +57,12 @@ A comprehensive enterprise mobile application built with React Native, featuring
 
 ## 🏗️ Architecture
 
-├── src/
-│   ├── components/        # Reusable UI components
-│   ├── screens/          # App screens
-│   ├── navigation/       # Navigation setup
-│   ├── services/         # API services
-│   ├── utils/           # Helper functions
-│   ├── hooks/           # Custom React hooks
-│   └── types/           # TypeScript definitions
-├── backend/
-│   ├── routes/          # API endpoints
-│   ├── models/          # Database models
-│   ├── middleware/      # Express middleware
-│   └── services/        # Business logic
+artemis-enterprise-mobile-app/
+├── app/                  # Main application screens (React Native)
+├── components/           # Reusable UI components
+├── utils/               # API integration and helper functions
+├── assets/              # Images and static files
+└── package.json         # Dependencies and scripts
 
 ## 🚀 Key Achievements
 
