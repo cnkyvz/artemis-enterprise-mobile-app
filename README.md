@@ -1,5 +1,13 @@
 # 🚀 Artemis Enterprise Mobile Application
 
+[![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactnative.dev/)
+[![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![PostgreSQL](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)](https://postgresql.org/)
+[![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://aws.amazon.com/)
+[![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/)
+
 A comprehensive enterprise mobile application built with React Native, featuring offline capabilities and real-time tracking system.
 
 ## 🌟 Features
@@ -45,23 +53,27 @@ A comprehensive enterprise mobile application built with React Native, featuring
 
 ## 📱 App Screenshots
 
-[Add screenshots here - remove any sensitive company data]
+### Core Features
+<div align="center">
+  <img src="screenshots/mobile/user-dashboard.png" width="250" alt="User Dashboard">
+  <img src="screenshots/mobile/vehicle-tracking.png" width="250" alt="Real-time Vehicle Tracking">
+  <img src="screenshots/mobile/sample-tracking.png" width="250" alt="QR Code Sample Tracking">
+</div>
+
+### Digital Form Management
+<div align="center">
+  <img src="screenshots/mobile/service-form.png" width="250" alt="Service Form - Top">
+  <img src="screenshots/mobile/service-form2.png" width="250" alt="Service Form - Bottom">
+  <img src="screenshots/mobile/appointment-calendar.png" width="250" alt="Appointment Calendar">
+</div>
 
 ## 🏗️ Architecture
-
-├── src/
-│   ├── components/        # Reusable UI components
-│   ├── screens/          # App screens
-│   ├── navigation/       # Navigation setup
-│   ├── services/         # API services
-│   ├── utils/           # Helper functions
-│   ├── hooks/           # Custom React hooks
-│   └── types/           # TypeScript definitions
-├── backend/
-│   ├── routes/          # API endpoints
-│   ├── models/          # Database models
-│   ├── middleware/      # Express middleware
-│   └── services/        # Business logic
+artemis-enterprise-mobile-app/
+├── app/                  # Main application screens (React Native)
+├── components/           # Reusable UI components
+├── utils/               # API integration and helper functions
+├── assets/              # Images and static files
+└── package.json         # Dependencies and scripts
 
 ## 🚀 Key Achievements
 
@@ -83,10 +95,40 @@ A comprehensive enterprise mobile application built with React Native, featuring
 - QR code integration for asset tracking
 - Appointment scheduling system
 
-## 🔧 Installation & Setup
+## 🔐 Advanced Authentication System
 
-```bash
-# Clone the repository
+### Multi-Layer Token Architecture
+- **Access Token** - Short-lived (15 min) for API requests
+- **Refresh Token** - Medium-lived (7 days) for token renewal  
+- **Device Token** - Long-lived (30 days) for device recognition
+- **Automatic Token Rotation** - Seamless background refresh
+
+### Enterprise-Level Session Management
+- Netflix/Spotify-style persistent sessions
+- Maintains login state until explicit logout
+- Cross-app session sharing
+- Background token refresh without user interruption
+- Secure token storage with encryption
+
+### Device & Activity Monitoring
+- Real-time device fingerprinting and tracking
+- App state monitoring (foreground/background/closed)
+- Session activity logging and analytics
+- Multi-device session management
+- Suspicious activity detection and automatic logout
+- Login location and IP tracking
+
+### Smart Token Strategy
+```typescript
+// enterpriseTokenManager.ts implements:
+{
+  accessToken: "15min expiry - API requests",
+  refreshToken: "7days expiry - token renewal", 
+  deviceToken: "30days expiry - device binding",
+  sessionId: "persistent until logout"
+}
+🔧 Installation & Setup
+bash# Clone the repository
 git clone https://github.com/cnkyvz/artemis-enterprise-mobile-app.git
 
 # Install dependencies
@@ -103,7 +145,6 @@ npm run ios
 
 # Run on Android
 npm run android
-
 📊 Performance Metrics
 
 App Size: < 50MB
